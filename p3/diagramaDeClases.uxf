@@ -1,0 +1,84 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>100</x><y>490</y><w>210</w><h>130</h></coordinates><panel_attributes>Arco
+--
++ numArcos: int
+- salida: Vertice 
+- llegada: Vertice 
+- etiqueta: String 
+- id: int 
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>100</x><y>340</y><w>210</w><h>100</h></coordinates><panel_attributes>Vertice
+--
+- numVertices: int 
+- etiqueta: String 
+- id: int 
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>340</y><w>420</w><h>280</h></coordinates><panel_attributes>/Grafo/
+--
+# etiqueta: String 
+
+--
++ crearPotenciaMatrices(): void 
++ camino(longCamino: int, salida: String, llegada: String): int 
++ matricesPotencia(): PotenciaMatriz 
++ addVertices(etiquetas: String[ ]): boolean 
++ getVertice(etiqueta: String): Vertice 
++ addArco(origen: String, destino: String, etiquetaArco: String): Grafo
++ borraArco(origen: String, destino: String): Grafo 
++ getArco(salida: String, llegada: String): Arco 
++ concatena(arco1: Arco, arco2: Arco): boolean 
++ grado(etiqueta: String): int 
++ esRegular(): boolean 
++ containsVertice(s: String): boolean 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>690</y><w>430</w><h>130</h></coordinates><panel_attributes>GrafoDirigido
+--
+
+--
++ addArco(origen: String, destino: String, etiquetaArco: String): Grafo 
++ desdeFichero(nombreFichero: String): GrafoDirigido 
++ salvar(nombreFichero: String): void 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>760</x><y>690</y><w>430</w><h>130</h></coordinates><panel_attributes>GrafoNoDirigido
+--
+
+--
++ addArco(origen: String, destino: String, etiquetaArco: String): Grafo 
++ borraArco(origen: String, destino: String): Grafo 
++ grado(etiqueta: String): int
++ desdeFichero(nombreFichero: String): GrafoNoDirigido 
++ salvar(nombreFichero: String): void </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1070</x><y>80</y><w>450</w><h>160</h></coordinates><panel_attributes>Matriz
+--
+- datos: int[ ][ ]
+- tam: int 
+- potencia: int 
+
+--
++ multiplicacionMatricial(matriz1: Matriz, matriz2: Matriz): Matriz 
++ setDato(fila: int, columna: int, dato:int): void
++ getDato(fila: int, columna: int): int </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>100</y><w>340</w><h>120</h></coordinates><panel_attributes>PotenciaMatriz
+--
+
+--
++ getMatriz(potencia: int): Matriz 
++ mulMatrices(matriz1: Matriz, matriz2: Matriz): Matriz 
++ potencia(potencia: int): Matriz 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>610</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>850</x><y>610</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>370</y><w>220</w><h>50</h></coordinates><panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=*
+m2=
+#vertices</panel_attributes><additional_attributes>10;20;200;20</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>530</y><w>220</w><h>50</h></coordinates><panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=*
+m2=
+#arcos</panel_attributes><additional_attributes>10;20;200;20</additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>210</y><w>130</w><h>150</h></coordinates><panel_attributes>lt=&lt;-
+m1=
+m2=
+#potenciaMatrices</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>150</y><w>220</w><h>50</h></coordinates><panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=*
+m2=
+-matrices</panel_attributes><additional_attributes>200;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>0</y><w>950</w><h>360</h></coordinates><panel_attributes>lt=&lt;-&gt;&gt;&gt;&gt;&gt;
+m1=*
+m2=
+-vertices</panel_attributes><additional_attributes>10;340;10;20;930;20;930;80</additional_attributes></element><element><id>UMLNote</id><coordinates><x>220</x><y>120</y><w>270</w><h>130</h></coordinates><panel_attributes>bg=black
+Ademas de los metodos incluidos, todas
+y cada una de las clases tienen sus getters 
+y setters de todos sus atributos, incluyendo
+tambien una funcion toString. 
+Tambien tienen los atributos asociados a 
+las diferentes relaciones entre las clases 
+(contencion, navegacion...)</panel_attributes><additional_attributes></additional_attributes></element></diagram>

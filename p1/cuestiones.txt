@@ -1,0 +1,33 @@
+APARTADO 3 - USO DE LIBRERÍAS BÁSICAS
+
+    Ejecuta el programa con distintos tipos de parámetros (numéricos o no, negativos,
+    etc.), sin parámetros, o con más de uno. ¿Qué sucede? ¿Ves algún problema o
+    mejora a implementar en el código?
+
+        ● Si lo llamamos sin parámetros simplemente nos imprime true y false, que es el valor
+            devuelto por la función esPadovan.
+        ● Si lo llamamos con letras como parámetros, el programa no compila.
+        ● Si lo llamamos con números negativos, como por ejemplo (java SecuenciaPadovan
+            -1 -2), imprime “Longitud -1 incorrecta” “Longitud -2 incorrecta” “true” “false”. Tiene
+            sentido este output porque no existen medidas de longitud negativas, por lo que no
+            se pueden crear secuencias de longitud -4 por ejemplo, lo mismo pasa si le pasas
+            como argumento cualquier letra.
+
+        Una de las mejoras que se podría incluir en el código sería la falta de información para el
+        usuario sobre los argumentos que tiene que introducir para ejecutar correctamente el
+        programa. Es decir, si el usuario pone como argumentos cualquier letra del abecedario (por
+        ejemplo) el programa no compila, pero estaría bien incluir un if antes de ejecutar el main en
+        el que se compruebe los argumentos introducidos, y si no son los correctos, informar
+        debidamente al usuario de cuáles serían los adecuados para ejecutar este programa.
+
+APARTADO 4 - TU PRIMER PROGRAMA EN JAVA
+
+    El método esSecuencia de este apartado ¿es de clase o de objeto? Justifica tu
+    respuesta, indicando por qué ese diseño es adecuado.
+
+		El método esSecuencia es un método de objeto ya que: Primero, no se trata de un método de tipo static. Y segundo,
+		el método es llamado por los Objetos instanciados de la Clase SecuenciaSkiponacci, no por la propia clase.
+		
+		Se trata de un diseño adecuado porque así es posible generalizar a cualquier secuencia skiponacci, es decir,
+		si llamas al método con un objeto con las características de una secuencia fibonacci, el método esSecuencia te dirá
+		si la lista introducida es una secuencia fibonacci, y así con cualquier otro tipo de secuencia.
